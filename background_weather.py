@@ -51,6 +51,9 @@ def update_wallpaper(path, url):
   cmd = """"""
   cmd += ("osascript -e 'tell application \"Finder\" to set desktop picture to POSIX file \"/Users/"+username+"/Desktop/background_images/bg.jpg\"'")
   os.system(cmd)
+  # Restart dock to see changes
+  cmd = "killall Dock"
+  os.system(cmd)
 
 def new_wallpaper(search_term):
   # Find relevant large images that match search terms through Flickr API
