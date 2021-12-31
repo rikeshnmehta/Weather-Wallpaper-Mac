@@ -83,7 +83,7 @@ def main():
   if len(sys.argv) < 2:
     #Run with no search terms to have wallpaper match local weather
     pprint(get_weather_desc() + " in " + get_location()['city'] + ", " + get_location()['country'])
-    search_tags = get_weather_desc().split()[-1] + ",landscape"
+    search_tags = get_weather_desc().split()[-1] + ", wallpaper"
     new_wallpaper(search_tags)
   else:
     #Specify search term if you would like to manually search for topic
